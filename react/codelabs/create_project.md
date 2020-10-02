@@ -14,21 +14,23 @@ after completing this codelab you will learn:
 - install and set up a router for your app
 - install and set up `redux`
 
+**NOTE**: All the links in this codelab are purely informative, you should be able to copy&paste your way through the codelab.
+
 ## prerequisites
 
-- recent version of `Node.js` installed. check current LTS at: https://nodejs.org/es/
+- a recent version of `Node.js` installed. check current LTS at: https://nodejs.org/es/
+- yarn is installed. if running `yarn --version` gives you an error, then run `npm -g install yarn`
 
 ## create
 
-the recommended way to create a `React` app is using the `create-react-app` toolchain. no installation is required, just go to your workspace directory and run:
-
+the recommended way to create a `React` app is using the `create-react-app` toolchain. no installation is required, just go to your workspace directory and run this (be patient, it might take a while to create the app)
 ```sh
 npx create-react-app react-codelab
 cd react-codelab
 yarn start
 ```
 
-you should now see the welcome page that was automatically generated for you. we will be replacing it soon. for now create the following files in their respective directories. the first line of each snippet will tell you where the file is supposed to be.
+you should now see the welcome page that was automatically generated for you. we will be replacing it soon. for now create the following files in their respective directories. the first line of each snippet will tell you where the file is supposed to be. just copy the snippet, manually create the file there it's supposed to be and paste the contents.
 
 ```jsx
 // react-codelab/src/components/HomeView.js
@@ -88,7 +90,7 @@ import ChangeMessageView from './components/ChangeMessageView'
 function App() {
     return (
         <Router>
-            {/* Notice the nav is outside the Switch component, we do this to have the nav be rendered regardless of the Route */}
+            {/* Notice the nav is outside the Switch component, we do this to have the nav be rendered regardless of the Route being displayed */}
             <nav>
                 <Link to='/home' style={{ padding: '4px' }}>Home</Link>
                 <Link to='/change' style={{ padding: '4px' }}>Change</Link>
@@ -117,8 +119,6 @@ export default App;
 ```
 
 now we have an app with two views: the `home` view and the `change` view. 
-notice the `change` view displays the current message, but for now it's hardcoded in the component. we will change this later.
-the `change` view also has a button without no behavior.
 
 `/home`
 ![pic](images/cra-home1.png)
